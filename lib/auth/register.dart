@@ -55,7 +55,7 @@ class _RegisterState extends State<Register> {
                   child: Text(
                     'Tidak sabar untuk belajar bersama!',
                     style: TextStyle(
-                      color: appPrimary,
+                      color: appPurple,
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
                     ),

@@ -19,7 +19,7 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: appPrimary,
+        backgroundColor: appPurple,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -35,14 +35,14 @@ class _NavbarState extends State<Navbar> {
           controller: pageController,
           // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
-            const Home(),
-            const Home(),
+             const Home(),
+             const Home(),
             const Profile(),
           ],
         ),
         bottomNavigationBar: WaterDropNavBar(
           backgroundColor: navigationBarColor,
-          waterDropColor: appPrimary,
+          waterDropColor: appPurple,
           onItemSelected: (int index) {
             setState(() {
               selectedIndex = index;

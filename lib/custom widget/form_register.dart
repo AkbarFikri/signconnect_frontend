@@ -27,7 +27,7 @@ class FormRegister extends StatelessWidget {
         ),
         const SizedBox(height: 10.0),
         TextFormField(
-          cursorColor: appPrimary,
+          cursorColor: appPurple,
           decoration: InputDecoration(
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
@@ -41,7 +41,7 @@ class FormRegister extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
-              borderSide: BorderSide(color: appPrimary.withOpacity(0.6)),
+              borderSide: BorderSide(color: appPurple.withOpacity(0.6)),
             ),
             
           ),

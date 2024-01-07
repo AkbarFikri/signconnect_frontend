@@ -13,7 +13,7 @@ class FormLoginEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: appPrimary,
+      cursorColor: appPurple,
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.grey.shade200,
@@ -24,7 +24,7 @@ class FormLoginEmail extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
-          borderSide: BorderSide(color: appPrimary.withOpacity(0.6)),
+          borderSide: BorderSide(color: appPurple.withOpacity(0.6)),
         ),
       ),
       validator: (value) {
@@ -53,7 +53,7 @@ class _FormLoginSandiState extends State<FormLoginSandi> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: appPrimary,
+      cursorColor: appPurple,
       obscureText: isObscure,
       decoration: InputDecoration(
         filled: true,
@@ -66,7 +66,7 @@ class _FormLoginSandiState extends State<FormLoginSandi> {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
-            color: appPrimary.withOpacity(0.6),
+            color: appPurple.withOpacity(0.6),
           ),
         ),
         suffixIcon: IconButton(

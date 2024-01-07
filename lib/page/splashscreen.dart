@@ -1,5 +1,3 @@
-// ignore_for_file: annotate_overrides
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../auth/login.dart';
@@ -18,147 +16,19 @@ class _SplashscreenState extends State<Splashscreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Login()));
+        context,
+        MaterialPageRoute(builder: (context) => const Login()),
+      );
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          const Column(
-            children: [
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                    SplashIcon(icon: "assets/icon/splash1.png"),
-                    SplashIcon(icon: "assets/icon/splash2.png"),
-                    SplashIcon(icon: "assets/icon/splash3.png"),
-                  ],
-                ),
-              ),
-            ],
+          Column(
+            children: List.generate(10, (index) => buildRow()),
           ),
           Center(
             child: Text(
@@ -166,11 +36,23 @@ class _SplashscreenState extends State<Splashscreen> {
               style: TextStyle(
                 fontSize: 38,
                 fontWeight: FontWeight.bold,
-                color: appPrimary,
+                color: appPurple,
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildRow() {
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: List.generate(
+            6,
+            (index) =>
+                SplashIcon(icon: "assets/icon/splash${index % 3 + 1}.png")),
       ),
     );
   }
