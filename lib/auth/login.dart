@@ -35,6 +35,7 @@ class _LoginState extends State<Login> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 50.0),
                       Text(
@@ -80,7 +81,7 @@ class _LoginState extends State<Login> {
                         ),
                         const SizedBox(height: 5.0),
                         Text(
-                          'Lorem ipsum dot amet color',
+                          'Aplikasi penunjang minat bahasa isyarat',
                           style: TextStyle(
                             color: appDarkgray,
                             fontSize: 14.0,

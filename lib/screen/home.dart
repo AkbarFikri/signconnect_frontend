@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/leaderboard.dart';
-import 'package:signconnect_frontend/page/games_greeting.dart';
+import 'package:signconnect_frontend/screen/kategori_dic.dart';
+import 'package:signconnect_frontend/screen/games_greeting.dart';
 
 import '../theme.dart';
 
@@ -131,12 +132,12 @@ class Home extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     GestureDetector(
+                    GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const GreetingGames()));
+                                builder: (context) => const KategoriDic()));
                       },
                       child: const MainFitur(
                         icon: 'assets/icon/dictionary.png',

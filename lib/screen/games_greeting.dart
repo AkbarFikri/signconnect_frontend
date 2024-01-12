@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:signconnect_frontend/custom%20widget/button.dart';
-import 'package:signconnect_frontend/page/level.dart';
+import 'package:signconnect_frontend/screen/level.dart';
 import 'package:signconnect_frontend/theme.dart';
 
 class GreetingGames extends StatefulWidget {
