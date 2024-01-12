@@ -40,32 +40,35 @@ class _NavbarState extends State<Navbar> {
             const Profile(),
           ],
         ),
-        bottomNavigationBar: WaterDropNavBar(
-          backgroundColor: navigationBarColor,
-          waterDropColor: appPurple,
-          onItemSelected: (int index) {
-            setState(() {
-              selectedIndex = index;
-            });
-            pageController.animateToPage(selectedIndex,
-                duration: const Duration(milliseconds: 400),
-                curve: Curves.easeOutQuad);
-          },
-          selectedIndex: selectedIndex,
-          barItems: <BarItem>[
-            BarItem(
-              filledIcon: Icons.home,
-              outlinedIcon: Icons.home_outlined,
-            ),
-            BarItem(
-              filledIcon: Icons.people_alt,
-              outlinedIcon: Icons.people_alt_outlined,
-            ),
-            BarItem(
-              filledIcon: Icons.person_rounded,
-              outlinedIcon: Icons.person_outline,
-            ),
-          ],
+        bottomNavigationBar: Container(
+           margin : const EdgeInsets.only(bottom: 16.0),
+          child: WaterDropNavBar(
+            backgroundColor: navigationBarColor,
+            waterDropColor: appPurple,
+            onItemSelected: (int index) {
+              setState(() {
+                selectedIndex = index;
+              });
+              pageController.animateToPage(selectedIndex,
+                  duration: const Duration(milliseconds: 400),
+                  curve: Curves.easeOutQuad);
+            },
+            selectedIndex: selectedIndex,
+            barItems: <BarItem>[
+              BarItem(
+                filledIcon: Icons.home,
+                outlinedIcon: Icons.home_outlined,
+              ),
+              BarItem(
+                filledIcon: Icons.people_alt,
+                outlinedIcon: Icons.people_alt_outlined,
+              ),
+              BarItem(
+                filledIcon: Icons.person_rounded,
+                outlinedIcon: Icons.person_outline,
+              ),
+            ],
+          ),
         ),
       ),
     );
