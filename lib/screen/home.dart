@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/leaderboard.dart';
 import 'package:signconnect_frontend/screen/kategori_dic.dart';
+import 'package:signconnect_frontend/screen/games_greeting.dart';
 
 import '../theme.dart';
 
@@ -143,9 +144,17 @@ class Home extends StatelessWidget {
                         title: 'My\nDictionary',
                       ),
                     ),
-                    const MainFitur(
-                      icon: 'assets/icon/games.png',
-                      title: 'My\nGames',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const GreetingGames()));
+                      },
+                      child: const MainFitur(
+                        icon: 'assets/icon/games.png',
+                        title: 'My\nGames',
+                      ),
                     ),
                   ],
                 ),
@@ -161,7 +170,7 @@ class Home extends StatelessWidget {
                 const SizedBox(height: 15.0),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 170.0,
+                  height: 256.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
                     color: const Color(0xffF9FBFF),
@@ -170,7 +179,7 @@ class Home extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: Container(
                         margin: const EdgeInsets.symmetric(
-                            horizontal: 5.0, vertical: 10.0),
+                            horizontal: 5.0, vertical: .0),
                         child: const Column(
                           children: [
                             Leaderboard(
@@ -259,30 +268,30 @@ class MainFitur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.4,
-      height: 93.0,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        color: const Color(0xffE3E5FF),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 57.0,
-            child: Image.asset(icon),
-          ),
-          const SizedBox(width: 8.0),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: appBlack,
+        width: MediaQuery.of(context).size.width * 0.4,
+        height: 93.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: const Color(0xffE3E5FF),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 57.0,
+              child: Image.asset(icon),
             ),
-          ),
-        ],
-      ),
-    );
+            const SizedBox(width: 8.0),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: appBlack,
+              ),
+            ),
+          ],
+        ),
+      );
   }
 }
