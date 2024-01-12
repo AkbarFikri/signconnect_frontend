@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/card_dic.dart';
-import 'package:signconnect_frontend/page/list_dic.dart';
+import 'package:signconnect_frontend/screen/list_dic.dart';
 import 'package:signconnect_frontend/theme.dart';
 
 class KategoriDic extends StatelessWidget {
@@ -87,7 +87,7 @@ class KategoriDic extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ListDic(),
+                    builder: (context) => const ListDic(),
                   ),
                 );
               },

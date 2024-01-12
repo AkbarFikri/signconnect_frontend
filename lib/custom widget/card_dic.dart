@@ -24,7 +24,7 @@ class CardDic extends StatelessWidget {
       decoration: BoxDecoration(
           color: appWhite,
           borderRadius: BorderRadius.circular(10.0),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               offset: Offset(0, 3),
               color: Color(0xffE5E5E5),

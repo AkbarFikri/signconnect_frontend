@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/kata_list_dic.dart';
-import 'package:signconnect_frontend/page/kosakata_dic.dart';
+import 'package:signconnect_frontend/screen/kosakata_dic.dart';
 
 import '../theme.dart';
 
@@ -104,7 +104,7 @@ class _ListDicState extends State<ListDic> {
           GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => KosaKataDic())));
+                    MaterialPageRoute(builder: ((context) => const KosaKataDic())));
               },
               child: const KataListDic(title: 'Halo')),
           const KataListDic(title: 'Aku'),

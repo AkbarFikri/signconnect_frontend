@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:signconnect_frontend/page/home.dart';
-import 'package:signconnect_frontend/page/profile.dart';
+import 'package:signconnect_frontend/screen/home.dart';
+import 'package:signconnect_frontend/screen/profile.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 import 'theme.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/leaderboard.dart';
-import 'package:signconnect_frontend/page/kategori_dic.dart';
+import 'package:signconnect_frontend/screen/kategori_dic.dart';
 
 import '../theme.dart';
 
