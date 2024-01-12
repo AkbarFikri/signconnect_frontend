@@ -19,6 +19,12 @@ class KosaKataDic extends StatelessWidget {
         centerTitle: true,
         backgroundColor: appSoftPurple,
         iconTheme: IconThemeData(color: appWhite),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -38,6 +44,7 @@ class KosaKataDic extends StatelessWidget {
           1
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(

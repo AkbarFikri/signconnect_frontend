@@ -15,6 +15,12 @@ class KategoriDic extends StatelessWidget {
         iconTheme: IconThemeData(
           color: appWhite,
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -23,38 +29,62 @@ class KategoriDic extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 175.0,
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               color: appSoftPurple,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Stack(
                 children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'My Dictionary',
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            fontWeight: FontWeight.bold,
-                            color: appWhite,
-                          ),
-                        ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          'Kota kata dasar untuk berkomunikasi dengan Teman Tuli.',
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: appWhite,
-                          ),
-                        )
-                      ],
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Image.asset('assets/image/belakang.png'),
                     ),
                   ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child: Image.asset('assets/image/maskot.png'),
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Image.asset('assets/image/depan.png'),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'My Dictionary',
+                                style: TextStyle(
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: appWhite,
+                                ),
+                              ),
+                              const SizedBox(height: 5.0),
+                              Text(
+                                'Kota kata dasar untuk berkomunikasi sehari-hari.',
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  color: appWhite,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          child: Image.asset('assets/image/maskot.png'),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

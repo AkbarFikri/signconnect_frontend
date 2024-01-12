@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/leaderboard.dart';
 import 'package:signconnect_frontend/screen/kategori_dic.dart';
 
+
 import '../theme.dart';
 
 class Home extends StatelessWidget {
