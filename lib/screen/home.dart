@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signconnect_frontend/custom%20widget/leaderboard.dart';
+import 'package:signconnect_frontend/screen/kategori_dic.dart';
 
 import '../theme.dart';
 
@@ -127,14 +128,22 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 15.0),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    MainFitur(
-                      icon: 'assets/icon/dictionary.png',
-                      title: 'My\nDictionary',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const KategoriDic()));
+                      },
+                      child: const MainFitur(
+                        icon: 'assets/icon/dictionary.png',
+                        title: 'My\nDictionary',
+                      ),
                     ),
-                    MainFitur(
+                    const MainFitur(
                       icon: 'assets/icon/games.png',
                       title: 'My\nGames',
                     ),
