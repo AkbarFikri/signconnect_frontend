@@ -21,7 +21,7 @@ class _ListDicState extends State<ListDic> {
           color: appWhite,
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -56,7 +56,7 @@ class _ListDicState extends State<ListDic> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

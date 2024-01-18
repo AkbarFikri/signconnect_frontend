@@ -70,7 +70,7 @@ class _LevelState extends State<Level> {
                 height: 49,
               ),
               ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: double.infinity),
+                constraints: const BoxConstraints(maxWidth: double.infinity),
                 child: const Wrap(
                   spacing: 32,
                   runSpacing: 16,
@@ -137,7 +137,7 @@ class LevelButton extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffFCF3E1),
+                  color: const Color(0xffFCF3E1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
@@ -155,7 +155,7 @@ class LevelButton extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffFCF3E1),
+                  color: const Color(0xffFCF3E1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
@@ -173,7 +173,7 @@ class LevelButton extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffFCF3E1),
+                  color: const Color(0xffFCF3E1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
@@ -208,7 +208,7 @@ class LevelButtonNotActive extends StatelessWidget {
             height: 84,
             width: 84,
             decoration: BoxDecoration(
-                color: Color(0xffB2B7BF),
+                color: const Color(0xffB2B7BF),
                 borderRadius: BorderRadius.circular(100)
             ),
             child: Center (
@@ -234,7 +234,7 @@ class LevelButtonNotActive extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffEBEDF1),
+                  color: const Color(0xffEBEDF1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
@@ -252,7 +252,7 @@ class LevelButtonNotActive extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffEBEDF1),
+                  color: const Color(0xffEBEDF1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
@@ -270,7 +270,7 @@ class LevelButtonNotActive extends StatelessWidget {
               height: 32,
               width: 32,
               decoration: BoxDecoration(
-                  color: Color(0xffEBEDF1),
+                  color: const Color(0xffEBEDF1),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Column(
